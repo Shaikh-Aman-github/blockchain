@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract  ResturantBills{
+    string ResturanName;
+    string ResturanAddrs; 
+    string   CustmerName;
+    int    TotalAmount;
+    string month;
+    function ResturantBills(string newResturanName, string newResturanAddrs, string newCustmerName, int newTotalAmount, 
+    string newMonth) public {
+        
+        ResturanName = newResturanName;
+        ResturanAddrs = newResturanAddrs;
+       TotalAmount = newTotalAmount;
+       CustmerName = newCustmerName;
+        month = newMonth;
+ 
+    }
+    function getResturantBills() public view returns(string,string,string,int,string) {
+        return(ResturanName, ResturanAddrs,CustmerName, TotalAmount, month);
+    }
+}
