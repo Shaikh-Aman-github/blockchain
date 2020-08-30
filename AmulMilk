@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract  AmulMilk{
+    string  CustomerName;
+    string CustomerAddrs; 
+    string   CountityOfMilk;
+    int    AmountOfMilk;
+    string month;
+    function ResturantBills(string newCustomerName, string newCustomerAddrs, string newCountityOfMilk, int newAmountOfMilk, 
+    string newMonth) public {
+        
+       CustomerName = newCustomerName;
+      CustomerAddrs= newCustomerAddrs;
+      CountityOfMilk = newCountityOfMilk;
+      AmountOfMilk = newAmountOfMilk;
+        month = newMonth;
+ 
+    }
+    function getResturantBills() public view returns(string,string,string,int,string) {
+        return(CustomerName, CustomerAddrs,CountityOfMilk, AmountOfMilk, month);
+    }
+}
